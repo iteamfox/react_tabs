@@ -25,12 +25,7 @@ export const Tabs: React.FC<TabsProps> = ({
               <a
                 href={`#${tab.id}`}
                 data-cy="TabLink"
-                onClick={event => {
-                  event.preventDefault();
-                  if (tab.id !== selectedTabId) {
-                    onTabSelected(tab);
-                  }
-                }}
+                onClick={() => onTabSelected(tab)}
               >
                 {tab.title}
               </a>
